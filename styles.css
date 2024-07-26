@@ -1,0 +1,293 @@
+/*
+Author: Matthew Hall
+Date: 7/6/2024
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+/* Style rules for body, images, and links */
+body {
+    min-height: 100%;
+    background: linear-gradient(0deg, rgba(64, 18, 4, 0.7), rgba(64, 18, 4, 0.7)), url("images/kyojuro_firey.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: #ba6f25;
+}
+
+/* Style rules for header */
+header {
+    color: #ffffff;
+}
+h1 {
+    padding: 2%;
+    text-align: center;
+}
+h3 {
+    padding: 2%;
+    text-align: center;
+}
+h2{
+    padding: 2%;
+    text-align: center;
+}
+/* Style rules for navigation */
+nav {
+    /* background-color: #ba6f25; */
+    background-color: rgba(186, 111, 37, 0.83);
+    color: #401204;
+}
+
+nav a {
+    color: #401204;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    border-top: 0.5px solid #b52828;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav li {
+    display: block;
+    color: #401204;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+/* Style rules for main content */
+main {
+    word-wrap: normal;
+    padding: 2%;
+    color: #ffffff;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main h3 {
+    padding-top: 2%;
+}
+
+main ul {
+    list-style-type: square;
+}
+
+h2{
+    text-align: center;
+}
+
+/* Style rules for table */
+table {
+    color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #ffffff;
+}
+
+th {
+    /* background-color: #401204; */
+    background-color: rgba(64, 18, 4, 0.5);
+    font-size: 1.15em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(99, 36, 16, 0.7);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(227, 65, 25, 0.7);
+}
+
+.move {
+    font-weight: bold;
+    text-align: right;
+}
+
+.port {
+    text-align: left;
+}
+
+/* Style rules for form elements */
+fieldset, input {
+margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
+    padding-top: 3%;
+}
+
+#submit {
+    margin: 0 auto;
+    display: block;
+    padding: 3%;
+    font-size: 1em;
+}
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    /* background-color: #2a1f14; */
+    background-color: rgba(42, 31, 20, 0.75);
+    color: #ffffff;
+    padding: 1% 0%;
+}
+
+footer a {
+    color: #ba6f25;
+    text-decoration: none;
+}
+/* Media Query for Mobile Viewport */
+@media screen and (max-width: 600px) {
+    /* Mobile Viewport: Show mobile class, hide tab-desk class and nav-links */
+    .mobile {
+        display: block;
+    }
+    #nav-links {
+        display: none;
+    }
+    .tab-desk {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
+    #tab-desk {
+        display: none;
+    }
+    /* Mobile Viewport: Style rules for hamburger menu */
+
+}
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 620px) {
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
+    .tab-desk {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+    /*Tablet Viewport: Style rules for nav */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+    nav li a {
+        padding: 0.5em;
+    }
+    /* Tablet Viewport: Style rules for form elements */
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+    /* Tablet Viewport: Style rules for footer */
+    footer {
+        overflow: auto;
+    }
+    .spread {
+        float: left;
+        width: 25%;
+    }
+    .help {
+        float: right;
+        width: 65%;
+    }
+    /* Tablet Viewport: Style rules for table */
+    table {
+        border: 1px solid #ffffff;
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 100%;
+    }
+    caption {
+        padding: 1%;
+        font-size: 1.5em;
+        font-weight: bolder;
+    }
+}
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+    body {
+        background: linear-gradient(rgba(64, 18, 4, 0.7),  rgba(149, 79, 10, 0.7)), url("images/kyojuro_firey.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    #wrapper {
+        width: 1920px;
+        margin: 0 auto;
+    }
+/*    main {
+        background-color: #401204;
+    } */
+}
+/* Media Query for Print */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px) {
+    /* Desktop Viewport: Style rules for nav */
+    nav li {
+        font-size: 1.5em;
+    }
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+    nav li a:hover {
+        color: #954f0a;
+        background-color: #401204;
+        opacity: 0.5;
+    }
+    /* Desktop Viewport: Style rules for main content */
+    main {
+        font-size: 1.3em;
+    }
+    /* Desktop Viewport: Style rules for form elements */
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+    .btn {
+        grid-column: 1 / span 2;
+    }
+}
