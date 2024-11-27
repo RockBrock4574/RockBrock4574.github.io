@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Matthew Hall
+    File Name: index.html
+    Date: 11/26/2024
+-->
+<html lang=“en”>
+<head>
+    <title></title>
+    <meta charset=“utf-8”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+
+</head>
+
+<body>
+    
+    <h1>Select a Major</h1>
+    
+    <form>
+        <button type="button" id="CIT">CIT Majors</button>
+        <button type="button" id="BUS">Business Majors</button>
+    </form>
+
+    <script id="text-template" type="text/x-handlebars-template">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Major</th>
+                        <th>Midterm</th>
+                        <th>Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each rows}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{major}}</td>
+                            <td>{{midterm}}</td>
+                            <td>{{final}}</td>
+                        </tr>
+                    {{each}}
+                </tbody>
+            </table>
+      
+    </script>
+    <div id="arraytable">
+        
+    </div>
+    <h3>We filter our dataset by major</h3>
+    <footer>
+    </footer>
+
+</body>
+<!--
+<a class="nav-icon" onclick="hamburger()">
+    <div id="icon">
+        &#9776;
+    </div>
+</a>
+-->
+<!--
+<form name="calcForm">      
+    <p><input size="10" type="number" name="cost" id="cost">
+    <label for="cost">Enter item cost</label></p>
+
+    <p><input size="10" type="number" name="amount" id="amount">
+    <label for="amount">Enter quantity purchased</label></p>
+    
+    <p><input onclick="calculateTotal()" type="button" value="Calculate"></p>
+
+    <input size="10" type="number" name="totalWithTax" id="totalWithTax">
+    <label for="totalWithTax">Total Cost with 6% tax</label>
+</form>
+-->
+<!--
+    <label for="question">Question:</label>
+    <input type="text" name="question" id="question">
+
+    <input type="submit" id="submit" value="submit" class="btn">        
+-->
+<!--
+<form name="taxForm">
+    <p><input size="10" type="number" name="income" id="income">
+    <label for="income">Input your income</label></p>
+
+    <p><input onclick="calculateTax()" type="button" value="Calculate Tax"></p>
+
+    <input size="10" type="number" name="tax" id="tax">
+    <label for="tax">Tax to be paid</label>
+</form>
+-->
+</html>
