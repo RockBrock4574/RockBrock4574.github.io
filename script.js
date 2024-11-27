@@ -7,9 +7,10 @@ window.onload = async function () {
         var studentsArray = await response.json();
         
         document.getElementById('CIT').onclick = function () {
+            /*
             var arraytable = document.getElementById('arraytable');//make variable to append the table
             arraytable.innerHTML = '';//clear the div for anti-concatenation purposes
-            
+            */
             var citStudents = studentsArray.filter(student => student.major === 'CIT');
             var templateText = document.getElementById('text-template').innerHTML;
             var compiledTemplateText = Handlebars.compile(templateText);
@@ -20,9 +21,10 @@ window.onload = async function () {
 
 
         document.getElementById('BUS').onclick = function () {
+            /*
             var arraytable = document.getElementById('arraytable');//make variable to append the table
             arraytable.innerHTML = '';//clear the div for anti-concatenation purposes
-            
+            */
             var busStudents = studentsArray.filter(student => student.major === 'BUS');
             var templateText = document.getElementById('text-template').innerHTML;
             var compiledTemplateText = Handlebars.compile(templateText);
